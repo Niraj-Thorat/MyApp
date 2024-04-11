@@ -1,8 +1,11 @@
 package com.example.MyApp.common;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
+// Only one class can be primary
+@Primary 
 public class CricketCoach implements Coach{
 
     @Override

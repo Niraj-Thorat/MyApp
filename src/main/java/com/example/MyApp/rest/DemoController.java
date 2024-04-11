@@ -14,16 +14,21 @@ public class DemoController {
     private Coach myCoach;
 
     // Define constructor for dependency injection
-    @Autowired
-    public DemoController(@Qualifier("trackCoach") Coach theCoach) {
-        myCoach = theCoach;
-    }
+    // @Autowired
+    // public DemoController(@Qualifier("trackCoach") Coach theCoach) {
+    //     myCoach = theCoach;
+    // }
 
     // Setter Injection
     // @Autowired
     // public void setCoach(@Qualifier("baseballCoach") Coach theCoach){
     // myCoach = theCoach;
     // }
+
+    @Autowired
+    public DemoController(Coach theCoach) {
+        myCoach = theCoach;
+    }
 
     @GetMapping("/dailyworkout")
     public String getDailyWorkout() {
