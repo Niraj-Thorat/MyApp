@@ -27,6 +27,7 @@ public class DemoController {
 
     @Autowired
     public DemoController(Coach theCoach) {
+        System.out.println("In Constructor: "+getClass().getSimpleName());
         myCoach = theCoach;
     }
 
