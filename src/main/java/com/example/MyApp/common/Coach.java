@@ -1,4 +1,4 @@
-package com.example.util;
+package com.example.MyApp.common;
 
 public interface Coach {
     String getDailyWorkout();
