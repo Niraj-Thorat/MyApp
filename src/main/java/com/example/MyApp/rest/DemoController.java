@@ -9,6 +9,7 @@ import com.example.MyApp.common.Coach;
 @RestController
 public class DemoController {
     //Define private field for dependecncy
+    //@Autowired
     private Coach myCoach;
 
     //Define constructor for dependency injection
