@@ -14,12 +14,12 @@ public class DemoController {
     private Coach myCoach;
     private Coach anotherCoach;
     // Define constructor for dependency injection
-    @Autowired
-    public DemoController(@Qualifier("trackCoach") Coach theCoach, 
-    @Qualifier("trackCoach") Coach theAnotherCoach) {
-        myCoach = theCoach;
-        anotherCoach = theAnotherCoach;
-    }
+    // @Autowired
+    // public DemoController(@Qualifier("trackCoach") Coach theCoach, 
+    // @Qualifier("trackCoach") Coach theAnotherCoach) {
+    //     myCoach = theCoach;
+    //     anotherCoach = theAnotherCoach;
+    // }
 
     // Setter Injection
     // @Autowired
@@ -32,6 +32,12 @@ public class DemoController {
     //     System.out.println("In Constructor: "+getClass().getSimpleName());
     //     myCoach = theCoach;
     // }
+
+    @Autowired
+    public DemoController(@Qualifier("swimCoach") Coach theCoach){
+        System.out.println("In Constructor: "+getClass().getSimpleName());
+        myCoach = theCoach;
+    }
 
     @GetMapping("/dailyworkout")
     public String getDailyWorkout() {
